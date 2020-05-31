@@ -21,12 +21,12 @@ collections:
       - label: 'Пост'
         name: 'body'
         widget: 'markdown'
-      # - label: 'Автор'
-      #   name: 'author'
-      #   widget: 'relation'
-      #   collection: "author"
-      #   searchFields: ["title"]
-      #   valueField: "title"
+      - label: 'Автор'
+        name: 'author'
+        widget: 'relation'
+        collection: "author"
+        searchFields: ["title"]
+        valueField: "title"
       - label: 'Обложка'
         name: 'image'
         widget: 'string'
