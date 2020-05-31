@@ -27,46 +27,46 @@ collections:
       #   collection: "author"
       #   searchFields: ["title"]
       #   valueField: "title"
-      # - label: 'Обложка'
-      #   name: 'image'
-      #   widget: 'string'
-      #   hint: 'Используйте сервис https://imgbb.com/ Добавьте ссылку на полное изображение'
-      # - label: 'Обои'
-      #   name: 'bg_image'
-      #   widget: 'string'
-      #   hint: 'На них отобразится имя белыми буквами. Используйте тёмное изображение'
-      #   required: false
-      # - label: 'Категория'
-      #   name: 'categories'
-      #   widget: 'list'
-      # - label: 'Теги'
-      #   name: 'tags'
-      #   widget: 'list'
-      # - label: 'Пост'
-      #   name: 'body'
-      #   widget: 'markdown'
-  # - name: 'author'
-  #   label: 'Авторы'
-  #   folder: 'content/author'
-  #   create: true
-  #   slug: '{{slug}}'
-  #   editor:
-  #     preview: true
-  #   fields:
-  #     - label: 'Имя'
-  #       name: 'title'
-  #       widget: 'string'
-  #     - label: 'Фото'
-  #       name: 'photo'
-  #       widget: 'string'
-  #       hint: 'Используйте сервис https://imgbb.com/ Добавьте ссылку на миниатюру (thumbnail)'
-  #       required: false
-  #     - label: 'Обои'
-  #       name: 'bg_image'
-  #       widget: 'string'
-  #       hint: 'На них отобразится имя белыми буквами. Используйте тёмное изображение'
-  #       required: false
-  #     - label: 'Об авторе'
-  #       name: 'body'
-  #       widget: 'text'
-  #       required: false
+      - label: 'Обложка'
+        name: 'image'
+        widget: 'string'
+        hint: 'Используйте сервис https://imgbb.com/ Добавьте ссылку на полное изображение'
+      - label: 'Обои'
+        name: 'bg_image'
+        widget: 'string'
+        hint: 'На них отобразится имя белыми буквами. Используйте тёмное изображение'
+        required: false
+      - label: 'Категория'
+        name: 'categories'
+        widget: 'list'
+      - label: 'Теги'
+        name: 'tags'
+        widget: 'list'
+      - label: 'Пост'
+        name: 'body'
+        widget: 'markdown'
+  - name: 'author'
+    label: 'Авторы'
+    folder: 'content/russian/author'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - label: 'Имя'
+        name: 'title'
+        widget: 'string'
+      - label: 'Фото'
+        name: 'photo'
+        widget: 'string'
+        hint: 'Используйте сервис https://imgbb.com/ Добавьте ссылку на миниатюру (thumbnail)'
+        required: false
+      - label: 'Обои'
+        name: 'bg_image'
+        widget: 'string'
+        hint: 'На них отобразится имя белыми буквами. Используйте тёмное изображение'
+        required: false
+      - label: 'Об авторе'
+        name: 'body'
+        widget: 'text'
+        required: false
