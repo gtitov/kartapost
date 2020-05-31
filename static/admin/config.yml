@@ -27,11 +27,11 @@ collections:
       - label: 'Обложка'
         name: 'image'
         widget: 'image'
-        hint: 'Не используйте разрешение больше 1500'
+        hint: 'Только png. Разрешение не больше 2000 в ширину'
       - label: 'Обои'
         name: 'bg_image'
-        widget: 'string'
-        hint: 'На них отобразится название белыми буквами. Используйте тёмное изображение. Добавьте ссылку на изображение, воспользуйтесь https://imgbb.com/'
+        widget: 'image'
+        hint: 'Только png. Разрешение не больше 2000 в ширину'
         required: false
       - label: 'Категория'
         name: 'categories'
@@ -56,16 +56,17 @@ collections:
       - label: 'Идентификатор'
         name: 'id'
         widget: 'string'
-        pattern: ['^[a-zA-Z0-9]*$', 'Только латинские буквы и арабские цифры!']
+        pattern: ['^[a-zA-Z0-9]*$', 'Не подходит']
+        hint: 'Только латинские буквы и арабские цифры'
       - label: 'Фото'
         name: 'photo'
         widget: 'string'
-        hint: 'Используйте сервис https://imgbb.com/ Добавьте ссылку на миниатюру (thumbnail)'
+        hint: 'Вставьте ссылку Используйте сервис https://www.techpowerup.org/upload Установите размер 200х200px'
         required: false
       - label: 'Обои'
         name: 'bg_image'
-        widget: 'string'
-        hint: 'На них отобразится имя белыми буквами. Используйте тёмное изображение'
+        widget: 'image'
+        hint: 'Только png. Разрешение не больше 2000 в ширину'
         required: false
       - label: 'Об авторе'
         name: 'body'
