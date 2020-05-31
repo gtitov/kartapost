@@ -24,6 +24,7 @@ collections:
         collection: "author"
         searchFields: ["title"]
         valueField: "{{slug}}"
+        displayFields: ["title"]
       - label: 'Обложка'
         name: 'image'
         widget: 'string'
