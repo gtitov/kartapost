@@ -56,7 +56,7 @@ collections:
       - label: 'Идентификатор'
         name: 'id'
         widget: 'string'
-        pattern: ['/^[a-z][a-z0-9]*$/i', 'Только латинские буквы и арабские цифры!']
+        pattern: ['^[a-zA-Z0-9]*$', 'Только латинские буквы и арабские цифры!']
       - label: 'Фото'
         name: 'photo'
         widget: 'string'
