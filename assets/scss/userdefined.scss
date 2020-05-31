@@ -1,0 +1,15 @@
+.author {
+    margin-bottom: 30px;
+};
+
+.avatar {
+	-webkit-filter: sepia(50%);
+	filter: sepia(50%);
+	-webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
+};
+
+.avatar:hover {
+	-webkit-filter: sepia(0);
+	filter: sepia(0);
+}

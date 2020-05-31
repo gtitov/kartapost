@@ -1,0 +1,120 @@
+################################# Default configuration ###################
+baseURL = "https://affectionate-hoover-78c4f6.netlify.app"
+defaultContentLanguage = "ru"
+title = "Cartographic Post"
+theme = "airspace"
+# post pagination
+paginate = "4"
+# post excerpt
+summaryLength = "30"
+# disqus short name
+disqusShortname = "" # get your shortname form here : https://disqus.com
+# disable language
+disableLanguages = ["en"]
+    
+
+
+#################################### Plugins ##############################
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/Ionicons/css/ionicons.min.css"
+[[params.plugins.css]]
+link = "plugins/magnific-popup/magnific-popup.css"
+[[params.plugins.css]]
+link = "plugins/slick/slick.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
+[[params.plugins.js]]
+link = "plugins/shuffle/shuffle.min.js"
+# [[params.plugins.js]]
+# link = "plugins/google-map/gmap.js"
+
+
+############################### widgets #################################
+
+[params.widgets]
+sidebar = ["recent_posts", "taxonomy_category", "taxonomy_tags"]
+
+
+############################## navigation ###############################
+
+# main menu
+[[menu.main]]
+name = "Публикации"
+URL = "blog"
+weight = 1
+
+[[menu.main]]
+name = "Авторы"
+URL = "author"
+weight = 2
+
+
+# footer menu
+[[menu.footer]]
+name = "О нас"
+URL = ""
+weight = 1
+
+[[menu.footer]]
+name = "Публикации"
+URL = "blog"
+weight = 2
+
+[[menu.footer]]
+name = "Авторы"
+URL = "author"
+weight = 3
+
+
+
+
+#################### default parameters ################################
+[params]
+logo = "images/logo.png"
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+# Contact Information
+mobile = "0124857985320"
+email = "demo@email.com"
+location = "North Main Street,Brooklyn Australia"
+# contact form action
+# contact_form_action = "#" # contact form works with : https://formspree.io
+# Google Analitycs
+# google_analitycs_id = "" # Your ID# search
+# multi-author support (if set to true, you must use an Array in the author field)
+multi_author = false
+# Format dates with Go's time formatting
+date_format = "02.01.2006"
+
+
+################################ Language ########################
+[Languages.ru]
+languageName = "Ru"
+languageCode = "ru"
+contentDir = "content/russian"
+weight = 1
+home = "О нас"
+# copyright
+copyright = "кафедра картографии и геоинформатики географического факультета МГУ имени М. В. Ломоносова, 2020"
+
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 2
+home = "About us"
+# copyright
+copyright = "2020 &copy; кафедра картографии и геоинформатики географического факультета МГУ имени М. В. Ломоносова"
