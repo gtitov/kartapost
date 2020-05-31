@@ -18,15 +18,12 @@ collections:
       - label: 'Дата'
         name: 'date'
         widget: 'datetime'
-      - label: 'Пост'
-        name: 'body'
-        widget: 'markdown'
       - label: 'Автор'
         name: 'author'
         widget: 'relation'
         collection: "author"
         searchFields: ["title"]
-        valueField: "title"
+        valueField: "{{slug}}"
       - label: 'Обложка'
         name: 'image'
         widget: 'string'
