@@ -27,13 +27,9 @@ collections:
         displayFields: ["title", "id"]
       - label: 'Обложка'
         name: 'image'
-        widget: 'image'
-        hint: 'Только png. Разрешение не больше 2000 в ширину'
-      - label: 'Обои'
-        name: 'bg_image'
-        widget: 'image'
-        hint: 'Только png. Разрешение не больше 2000 в ширину'
-        required: false
+        widget: 'string'
+        pattern: ['https:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}', 'Ниже подсказка']
+        hint: 'Вставьте URL изображения. Обязательно https://. Воспользуйтесь сервисом https://www.techpowerup.org/upload'
       - label: 'Категория'
         name: 'categories'
         widget: 'list'
@@ -62,12 +58,14 @@ collections:
       - label: 'Фото'
         name: 'photo'
         widget: 'string'
-        hint: 'Вставьте ссылку Используйте сервис https://www.techpowerup.org/upload Установите размер 200х200px'
+        pattern: ['https:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}', 'Ниже подсказка']
+        hint: 'Вставьте URL изображения. Размер 200х200px. Обязательно https://. Воспользуйтесь сервисом https://www.techpowerup.org/upload'
         required: false
       - label: 'Обои'
         name: 'bg_image'
-        widget: 'image'
-        hint: 'Только png. Разрешение не больше 2000 в ширину'
+        widget: 'string'
+        pattern: ['https:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}', 'Ниже подсказка']
+        hint: 'Вставьте URL изображения. Обязательно https://. Воспользуйтесь сервисом https://www.techpowerup.org/upload'
         required: false
       - label: 'Об авторе'
         name: 'body'
