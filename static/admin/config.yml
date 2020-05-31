@@ -23,16 +23,15 @@ collections:
         widget: 'relation'
         collection: "author"
         searchFields: ["title"]
-        valueField: "{{slug}}"
-        displayFields: ["title"]
+        valueField: "id"
       - label: 'Обложка'
         name: 'image'
-        widget: 'string'
-        hint: 'Используйте сервис https://imgbb.com/ Добавьте ссылку на полное изображение'
+        widget: 'image'
+        hint: 'Не используйте разрешение больше 1500'
       - label: 'Обои'
         name: 'bg_image'
         widget: 'string'
-        hint: 'На них отобразится имя белыми буквами. Используйте тёмное изображение'
+        hint: 'На них отобразится название белыми буквами. Используйте тёмное изображение. Добавьте ссылку на изображение, воспользуйтесь https://imgbb.com/'
         required: false
       - label: 'Категория'
         name: 'categories'
@@ -47,13 +46,17 @@ collections:
     label: 'Авторы'
     folder: 'content/russian/author'
     create: true
-    slug: '{{slug}}'
+    slug: '{{id}}'
     editor:
       preview: true
     fields:
       - label: 'Имя'
         name: 'title'
         widget: 'string'
+      - label: 'Идентификатор'
+        name: 'id'
+        widget: 'string'
+        pattern: ['/^[a-z][a-z0-9]*$/i', 'Только латинские буквы и арабские цифры!']
       - label: 'Фото'
         name: 'photo'
         widget: 'string'

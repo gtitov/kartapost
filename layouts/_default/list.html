@@ -6,8 +6,9 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        {{ $paginator := .Paginate .Data.Pages }}
-        {{ range $paginator.Pages }}
+				{{ $paginator := .Paginate .Data.Pages }}
+				{{ range $paginator.Pages }}
+				
         <div class="post">
           <div class="post-media post-thumb">
             <a href="{{ .Permalink }}">
@@ -19,15 +20,16 @@
             <ul>
               <li><i class="ion-calendar"></i> {{ .PublishDate.Format $.Site.Params.date_format }}</li>
               <li><i class="ion-android-people"></i>
-                {{ i18n "posted_by" }}
-                {{if $.Site.Params.multi_author}}
-                {{ range $index, $elements:= .Params.Author }}{{ if ne $index 0 }}, {{ end }}<a class="text-primary" href="{{ `author/` | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
-                {{else}}
-                <a class="text-primary" href="{{ `author/` | relLangURL }}{{ .Params.Author | urlize }}">{{ .Params.Author }}</a>
-                {{end}}
+								{{ i18n "posted_by" }}
+								{{ $author_id := .Params.Author }}
+								<a class="text-primary" href="{{ `author/` | relLangURL }}{{ $author_id | urlize }}">
+									{{ range $author_page := (where .Site.RegularPages "Type" "author") }}
+									{{ if eq $author_page.Params.Id $author_id }}{{ $author_page.Params.Title }}{{ end }}
+									{{ end }}
+								</a>
               </li>
               <li><i class="ion-pricetags"></i> 
-                {{ range $index, $elements:= .Params.Tags }}
+                {{ range $index, $elements := .Params.Tags }}
                 {{ if ne $index 0 }}, {{ end }}<a href="{{ `tags/` | relLangURL }}{{ . | lower }}">{{ . | humanize }}</a>
 								{{ end }}
               </li>
@@ -37,7 +39,8 @@
             <p>{{ .Summary }}</p>
             <a href="{{ .Permalink }}" class="btn btn-main">{{ i18n "read_more" }}</a>
           </div>
-        </div>
+				</div>
+				
         {{ end }}
         
 				<!-- pagination -->

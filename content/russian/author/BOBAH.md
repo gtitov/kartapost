@@ -1,5 +1,6 @@
 ---
 title: "John Doe"
+id: "BOBAH"
 photo: "https://i.ibb.co/nDJbSmM/f-Jdt9-XOj7-Us.jpg"
 bg_image: "images/featue-bg.jpg"
 draft: false

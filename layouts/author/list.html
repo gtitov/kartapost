@@ -3,21 +3,23 @@
 {{ partial "page-title.html" . }}
 
 <div class="page-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center">
-        {{ $paginator := .Paginate .Data.Pages }}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				{{ $paginator := .Paginate .Data.Pages }}
 				{{ range $paginator.Pages }}
-					<div class="author">
-						{{ if .Params.Photo }}
-						<a href="{{ .Permalink }}"><img style="border-radius: 50%;" class="img-fluid avatar" src="{{.Params.Photo}}"></a>
-						{{ else }}
-						<a href="{{ .Permalink }}"><img style="border-radius: 50%;" class="img-fluid avatar" src="https://i.ibb.co/nDJbSmM/f-Jdt9-XOj7-Us.jpg"></a>
-						{{ end }}
-						<h4 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-					</div>
-        {{ end }}
-        
+				<div class="author">
+					{{ if .Params.Photo }}
+					<a href="{{ .Permalink }}"><img style="border-radius: 50%;" class="img-fluid avatar-sepia"
+							src="{{.Params.Photo}}"></a>
+					{{ else }}
+					<a href="{{ .Permalink }}"><img style="border-radius: 50%;" class="img-fluid avatar-sepia"
+							src="https://i.ibb.co/nDJbSmM/f-Jdt9-XOj7-Us.jpg"></a>
+					{{ end }}
+					<h4 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+				</div>
+				{{ end }}
+
 				<!-- pagination -->
 				{{ $paginator := .Paginator }}
 				{{ $adjacent_links := 2 }}
@@ -31,8 +33,8 @@
 						{{ if $paginator.HasPrev }}
 						<li>
 							<a href="{{ $paginator.Prev.URL }}" class="page-link">{{ i18n "page_prev" }}</a>
-            </li>
-            {{ end }}
+						</li>
+						{{ end }}
 						<!-- Page numbers. -->
 						{{ range $paginator.Pagers }}
 						{{ $.Scratch.Set "page_number_flag" false }}
@@ -80,9 +82,9 @@
 					</ul>
 				</nav>
 				{{ end }}
-      </div>
-    </div>
-  </div>
+			</div>
+		</div>
+	</div>
 </div>
 
 {{ end }}

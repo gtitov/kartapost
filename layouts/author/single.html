@@ -9,18 +9,15 @@
 				<div class="text-center">
 					<figure>
 						{{ if .Params.Photo }}
-						<img style="border-radius: 50%;" class="img-fluid" src="{{.Params.Photo}}">
+						<img style="border-radius: 50%;" class="img-fluid avatar-caption" src="{{.Params.Photo}}">
 						{{ else }}
-						<img style="border-radius: 50%;" class="img-fluid" src="https://i.ibb.co/nDJbSmM/f-Jdt9-XOj7-Us.jpg">
+						<img style="border-radius: 50%;" class="img-fluid avatar-caption"
+							src="https://i.ibb.co/nDJbSmM/f-Jdt9-XOj7-Us.jpg">
 						{{ end }}
-						<figcaption>
-							<h5 class="font-weight-bold">
-								{{ .Params.Name }}
-							</h5>
-						</figcaption>
+						<figcaption>{{ .Params.Title }}</figcaption>
 					</figure>
 					<hr>
-						{{ .Content }}
+					{{ .Content }}
 					<hr>
 					<ul class="list-inline">
 						{{ range .Params.Social }}
@@ -43,11 +40,9 @@
 				</div>
 			</div>
 			{{ $authored_pages := newScratch }}
-			{{ if $.Site.Params.multi_author }}
-			{{ .Scratch.Set "authored_pages" (where .Site.RegularPages "Params.author" "intersect" (slice .Title)) }}
-			{{ else }}
-			{{ .Scratch.Set "authored_pages" (where .Site.RegularPages "Params.author" .Title) }}
-			{{ end }}
+			{{ $author_id := .Params.Id }}
+			{{ $author_name := .Params.Title }}
+			{{ .Scratch.Set "authored_pages" (where .Site.RegularPages "Params.author" $author_id) }}
 			{{ range (.Scratch.Get "authored_pages") }}
 			<div class="col-md-6">
 				<div class="post">
@@ -59,20 +54,19 @@
 					<h3 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
 					<div class="post-meta">
 						<ul>
-							<li><i class="ion-calendar"></i> {{ .PublishDate.Format "January 2, 2006" }}</li>
-              <li><i class="ion-android-people"></i>
-                {{ i18n "posted_by" }}
-                {{if $.Site.Params.multi_author}}
-                {{ range $index, $elements:= .Params.Author }}{{ if ne $index 0 }}, {{ end }}<a class="text-primary" href="{{ `author/` | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
-                {{else}}
-                <a class="text-primary" href="{{ `author/` | relLangURL }}{{ .Params.Author | urlize }}">{{ .Params.Author }}</a>
-                {{end}}
-              </li>
-              <li><i class="ion-pricetags"></i> 
-                {{ range $index, $elements:= .Params.Tags }}
-                {{ if ne $index 0 }}, {{ end }}<a href="{{ `tags/` | relLangURL }}{{ . | lower }}">{{ . | humanize }}</a>
+							<li><i class="ion-calendar"></i> {{ .PublishDate.Format $.Site.Params.date_format }}</li>
+							<li><i class="ion-android-people"></i>
+								{{ i18n "posted_by" }}
+								<a class="text-primary" href="{{ `author/` | relLangURL }}{{ $author_id | urlize }}">
+									{{ $author_name }}
+								</a>
+							</li>
+							<li><i class="ion-pricetags"></i>
+								{{ range $index, $elements:= .Params.Tags }}
+								{{ if ne $index 0 }}, {{ end }}<a
+									href="{{ `tags/` | relLangURL }}{{ . | lower }}">{{ . | humanize }}</a>
 								{{ end }}
-              </li>
+							</li>
 						</ul>
 					</div>
 					<div class="post-content">
