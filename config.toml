@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "https://vibrant-leakey-566476.netlify.app"
+baseURL = "https://cartopost.ga"
 defaultContentLanguage = "ru"
 title = "Cartographic Post"
 # post pagination
