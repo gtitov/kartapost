@@ -2,7 +2,6 @@
 baseURL = "https://affectionate-hoover-78c4f6.netlify.app"
 defaultContentLanguage = "ru"
 title = "Cartographic Post"
-theme = "airspace"
 # post pagination
 paginate = "4"
 # post excerpt
