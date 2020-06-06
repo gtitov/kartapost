@@ -35,7 +35,7 @@
               </li>
               <li><i class="ion-pricetags"></i> 
                 {{ range $index, $elements := .Params.Tags }}
-                {{ if ne $index 0 }}, {{ end }}<a href="{{ `tags/` | relLangURL }}{{ . | lower }}">{{ . | humanize }}</a>
+                {{ if ne $index 0 }}, {{ end }}<a href="{{ `tags/` | relLangURL }}{{ . | lower }}">{{ . | humanize | lower }}</a>
 								{{ end }}
               </li>
             </ul>

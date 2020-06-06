@@ -5,7 +5,7 @@
   .widget-title {
     margin-bottom: 15px;
     padding-bottom: 10px;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #333;
     font-weight: 500;
     border-bottom: 1px solid $border-color;
@@ -20,9 +20,15 @@
       }
 
       .media-heading {
+        margin-top: -8px;
         a {
-          color: $black;
-          font-size: 16px;
+          color: #837f7e;
+          font-size: 1.6rem;
+          @include transition (all, 0.3s, ease);
+
+          &:hover {
+            color: $primary-color;
+          }
         }
       }
 

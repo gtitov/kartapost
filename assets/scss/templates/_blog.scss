@@ -29,19 +29,20 @@
   .post-title {
     margin-top: 10px;
     margin: 25px 0 0;
+    font-weight: 300;
+    color: $primary-color;
     // text-transform: uppercase;
 
     a {
-      color: $primary-color;
-
+      
       &:hover {
-        color: $primary-color;
+        color: $secondary-color;
       }
     }
   }
 
   .post-meta {
-    font-size: 13px;
+    font-size: 1rem;
     margin-top: 10px;
 
     ul {
