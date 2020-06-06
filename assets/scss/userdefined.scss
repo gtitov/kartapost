@@ -24,25 +24,10 @@
 	opacity: 1;
 }
 
-// .avatar-caption figcaption {
-// 	position: absolute;
-// 	bottom: -20px;
-// 	left: 0;
-// 	z-index: -1;
-// 	display: block;
-// 	// width: 300px;
-// 	margin: 0;
-// 	padding: 0;
-// 	// color: #444;
-// 	// font-size: 18px;
-// 	text-decoration: none;
-// 	text-align: center;
-// 	-webkit-transition: .3s ease-in-out;
-// 	transition: .3s ease-in-out;
-// 	opacity: 0;
-// }
-
-// .avatar-caption img:hover+figcaption {
-// 	bottom: -36px;
-// 	opacity: 1;
-// }
+.navbar-brand > img {
+	height: inherit;
+	@include mobile {
+		width: 200px;
+		height: auto;
+	}
+}
