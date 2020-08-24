@@ -30,13 +30,12 @@
     margin-top: 10px;
     margin: 25px 0 0;
     font-weight: 300;
-    color: $primary-color;
     // text-transform: uppercase;
 
     a {
-      
+      color: $primary-text-color;
       &:hover {
-        color: $secondary-color;
+        // color: $dark-text-color;
       }
     }
   }
@@ -48,16 +47,16 @@
     ul {
       li {
         display: inline-block;
-        color: #909090;
+        color: $light-text-color;
         margin-right: 20px;
         font-size: 12px;
         letter-spacing: .5px;
 
         a {
-          color: #909090;
+          color: $light-text-color;
 
           &:hover {
-            color: $primary-color;
+            color: $primary-text-color;
           }
         }
       }
@@ -72,7 +71,8 @@
     margin-top: 20px;
 
     p {
-      line-height: 26px;
+      // line-height: 26px;
+      color: $light-text-color;
     }
 
     img {

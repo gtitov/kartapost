@@ -1,5 +1,5 @@
-$primary-font: 'Playfair Display', serif;
-$secondary-font: 'Poppins', serif;
+// $primary-font: 'Playfair Display', serif;
+// $secondary-font: 'Poppins', serif;
 $light: #fff;
 $primary-color:#655E7A;
 $secondary-color:#2E7EED;
@@ -52,6 +52,9 @@ a {
 
 .section-title {
 	padding-bottom: 50px;
+	h4 {
+		font-family: $secondary-font;
+	}
 }
 
 

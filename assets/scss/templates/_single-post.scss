@@ -7,6 +7,19 @@
   .post-thumb {
     margin-top: 30px;
   }
+
+  .post-title {
+    font-size: 3rem;
+    font-family: $secondary-font;
+    font-weight: 900;
+    color: $dark-text-color;
+  }
+
+  .post-content {
+    p {
+      color: $primary-text-color;
+    }
+  }
 }
 
 .post-sub-heading {
@@ -88,7 +101,7 @@
     p {
       line-height: 30px;
       font-size: 20px;
-      color: $primary-color;
+      color: $primary-text-color;
     }
   }
 }

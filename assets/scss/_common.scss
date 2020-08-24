@@ -4,6 +4,10 @@ ul {
   // list-style-type: none;
 }
 
+p {
+  color: $light-text-color;
+}
+
 iframe {
   border: 0;
 }
@@ -259,9 +263,10 @@ input[type="tel"] {
   }
 
   p {
-    font-style: italic;
+    // font-style: italic;
+    font-weight: 300;
     color: #666;
-    font-family: $secondary-font;
+    font-family: $primary-font;
   }
 }
 
