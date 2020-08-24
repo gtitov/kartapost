@@ -7,6 +7,9 @@
 		<div class="row">
 			<div class="col-md-8">
 				<div class="post post-single">
+					<div class="post-thumb">
+						<img class="img-responsive" src="{{ .Params.Image | relURL }}" alt="{{ .Title }}">
+					</div>
 					<h2 class="post-title">{{ .Title }}</h2>
 					<div class="post-meta">
 						<ul>
@@ -31,9 +34,6 @@
 								{{ end }}
               </li>
             </ul>
-					</div>
-					<div class="post-thumb">
-						<img class="img-responsive" src="{{ .Params.Image | relURL }}" alt="{{ .Title }}">
 					</div>
 					<div class="post-content post-excerpt">
 						{{ .Content }}
