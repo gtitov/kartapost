@@ -13,13 +13,8 @@ banner:
 about:
   enable : true
   title : "Зачем?"
-  description : "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-              blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics"
-  content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id."
+  description : "Для интересющихся. Для кафедры. Для себя."
+  content : "Печатная версия в виде стенгазеты висит на 19 этаже Главного здания МГУ. Приходите посмотреть! А эта версия висит здесь. В Интернете. Заходите посмотреть!"
   image : "images/wrapper-img.png"
 
 
@@ -29,7 +24,7 @@ portfolio:
   bg_image : "images/featue-bg.jpg"
   title : "WE BELIEVE IN GREAT IDEAS"
   content : "
-  Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+  Это текст-рыба. Он здесь находится, чтобы можно было в полной мере насладится эффектом параллакса при прокручивании страницы. Может, позже здесь будет интересный, содержательный текст.
 
 
   Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
@@ -48,10 +43,10 @@ cta:
   enable : true
   bg_image : "images/call-to-action-bg.jpg"
   title : "Кто за этим стоит?"
-  content : "Read more about what we do and our philosophy of design. Judge for yourself The work and results <br> we’ve achieved for other clients, and meet our highly experienced Team who just love to design."
+  content : "Мы учимся и периодически пишем сюда"
   button:
     enable : true
-    label : "Команда"
+    label : "Авторы"
     link : "author"
 
 ############################# Funfacts ###############################
