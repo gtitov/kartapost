@@ -1,7 +1,7 @@
 ################################# Default configuration ###################
 baseURL = "https://cartopost.ga"
 defaultContentLanguage = "ru"
-title = "Cartographic Post"
+title = "KAPTÁ.post"
 # post pagination
 paginate = "4"
 # post excerpt
@@ -84,7 +84,7 @@ weight = 3
 logo = "images/logo.png"
 # Meta data
 description = "This is meta description"
-author = "Themefisher"
+author = "gman62"
 # Contact Information
 mobile = "0124857985320"
 email = "demo@email.com"
@@ -114,6 +114,6 @@ languageName = "En"
 languageCode = "en-us"
 contentDir = "content/english"
 weight = 2
-home = "About us"
+home = "About"
 # copyright
 copyright = "2020 &copy; кафедра картографии и геоинформатики географического факультета МГУ имени М. В. Ломоносова"
