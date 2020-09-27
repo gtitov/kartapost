@@ -81,7 +81,7 @@ weight = 3
 
 #################### default parameters ################################
 [params]
-logo = "images/logo.png"
+logo = "images/logo.svg"
 # Meta data
 description = "This is meta description"
 author = "gman62"
