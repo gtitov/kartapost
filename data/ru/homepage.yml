@@ -1,7 +1,7 @@
 ############################### Banner ##############################
 banner:
   enable : true
-  bg_image : "images/slider-bg.jpg"
+  bg_image : "img/slider-bg.jpg"
   title : "газета"
   content : "студентов кафедры картографии и геоинформатики географического факультета МГУ имени М. В. Ломоносова"
   button:
@@ -12,26 +12,17 @@ banner:
 ############################# About #################################
 about:
   enable : true
-  title : "Зачем?"
+  title : "Зачем"
   description : "Для интересющихся. Для кафедры. Для себя."
-  content : "Печатная версия в виде стенгазеты висит на 19 этаже Главного здания МГУ. Приходите посмотреть! А эта версия висит здесь. В Интернете. Заходите посмотреть!"
-  image : "images/wrapper-img.png"
+  image : "img/wrapper-img.png"
 
 
 ######################### Portfolio ###############################
 portfolio:
   enable : true
-  bg_image : "images/featue-bg.jpg"
-  title : "WE BELIEVE IN GREAT IDEAS"
-  content : "
-  Это текст-рыба. Он здесь находится, чтобы можно было в полной мере насладится эффектом параллакса при прокручивании страницы. Может, позже здесь будет интересный, содержательный текст.
-
-
-  Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-
-
-  Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-  "
+  bg_image : "img/featue-bg.jpg"
+  title : "А как же стенгазета?"
+  content : "А стенгазета висит на 19 этаже Главного здания МГУ. Приходите посмотреть! А эта версия висит здесь. В Интернете. Посмотрите!"
   # button:
   #   enable : true
   #   label : "View Works"
@@ -41,7 +32,7 @@ portfolio:
 ############################ call to action ###########################
 cta:
   enable : true
-  bg_image : "images/call-to-action-bg.jpg"
+  bg_image : "img/call-to-action-bg.jpg"
   title : "Кто за этим стоит?"
   content : "Мы учимся и периодически пишем сюда"
   button:
