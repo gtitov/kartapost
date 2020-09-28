@@ -1,6 +1,6 @@
 <div class="widget widget-latest-post">
-    <h4 class="widget-title">{{ i18n "latest_posts" }}</h4>
-    {{ range first 4 (where .Site.RegularPages "Type" "blog") }}
+  <h4 class="widget-title">{{ i18n "latest_posts" }}</h4>
+  {{ range first 4 (where .Site.RegularPages "Type" "blog") }}
     <div class="media">
       <a class="pull-left" href="{{ .Permalink }}">
         <img class="media-object" src="{{ .Params.Image | relURL }}" alt="{{ .Title }}">
@@ -10,5 +10,5 @@
         <p>{{ .Summary | truncate 50 }}</p>
       </div>
     </div>
-    {{ end }}
-  </div>
+  {{ end }}
+</div>
