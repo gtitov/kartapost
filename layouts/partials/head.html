@@ -4,7 +4,7 @@
 
   {{ "<!-- mobile responsive meta -->" | safeHTML }}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta name="description" content="{{ with .Params.Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
   {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
   {{ hugo.Generator }}
@@ -19,12 +19,17 @@
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 
   {{ "<!--Favicon-->" | safeHTML }}
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ `images/apple-touch-icon.png` | absURL }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ `images/favicon-32x32.png` | absURL }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ `images/favicon-16x16.png` | absURL }}">
-  <link rel="manifest" href="{{ `images/site.webmanifest` | absURL }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ `img/favicon/apple-touch-icon.png` | absURL }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ `img/favicon/favicon-32x32.png` | absURL }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ `img/favicon/favicon-16x16.png` | absURL }}">
+  <link rel="manifest" href="{{ `img/favicon/site.webmanifest` | absURL }}">
 
   <!-- Netlify Identity widget -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    // Run Netlify Identity widget after page load
+    var netlifyWidget=document.createElement('script');
+    netlifyWidget.src = "https://identity.netlify.com/v1/netlify-identity-widget.js";
+    document.head.appendChild(netlifyWidget);
+  </script>
 
 </head>
