@@ -3,7 +3,7 @@ baseURL = "https://cartopost.ga"
 defaultContentLanguage = "ru"
 title = "KAPTÁ.post"
 # post pagination
-paginate = "4"
+paginate = "10"
 # post excerpt
 summaryLength = "30"
 # disqus short name
@@ -81,7 +81,7 @@ weight = 3
 
 #################### default parameters ################################
 [params]
-logo = "img/logo.svg"
+logo = "img/logo/logo.svg"
 # Meta data
 description = "This is meta description"
 author = "gman62"
