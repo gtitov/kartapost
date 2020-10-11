@@ -12,7 +12,12 @@
         <div class="post">
           <div class="post-media post-thumb">
             <a href="{{ .Permalink }}">
-              <img src="{{ .Params.Image | relURL }}" alt="{{ .Title }}">
+							{{if .Params.image }}
+							{{ $image := .Params.image }}
+							{{ $src := resources.Get $image }}
+							{{ $medium := $src.Resize "800x q85 Box" }}
+							<img class="media-object" src="{{ $medium.RelPermalink }}" alt="{{ .Title }}">
+							{{ end }}
             </a>
           </div>
           <h3 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>

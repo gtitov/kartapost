@@ -2,5 +2,5 @@
 title: "Публикации"
 # description: ""
 draft: false
-bg_image: "images/featue-bg.jpg"
+bg_image: "img/backgrounds/blog-bg.jpg"
 ---

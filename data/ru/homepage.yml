@@ -1,7 +1,7 @@
 ############################### Banner ##############################
 banner:
   enable : true
-  bg_image : "img/slider-bg.jpg"
+  bg_image : "img/backgrounds/homepage-bg.jpg"
   title : "газета"
   content : "студентов кафедры картографии и геоинформатики географического факультета МГУ имени М. В. Ломоносова"
   button:
@@ -13,14 +13,14 @@ banner:
 about:
   enable : true
   title : "Зачем"
-  description : "Для интересющихся. Для кафедры. Для себя."
-  image : "img/wrapper-img.png"
+  description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit sapiente totam iure reiciendis excepturi doloremque libero inventore consectetur vitae, praesentium omnis commodi aperiam magni perspiciatis voluptatibus delectus iusto voluptatem ex!"
+  image : "img/homepage/wrapper-img.png"
 
 
 ######################### Portfolio ###############################
 portfolio:
   enable : true
-  bg_image : "img/featue-bg.jpg"
+  bg_image : "img/homepage/newspaper.jpg"
   title : "А как же стенгазета?"
   content : "А стенгазета висит на 19 этаже Главного здания МГУ. Приходите посмотреть! А эта версия висит здесь. В Интернете. Посмотрите!"
   # button:
@@ -32,7 +32,7 @@ portfolio:
 ############################ call to action ###########################
 cta:
   enable : true
-  bg_image : "img/call-to-action-bg.jpg"
+  # bg_image : "img/call-to-action-bg.jpg"
   title : "Кто за этим стоит?"
   content : "Мы учимся и периодически пишем сюда"
   button:

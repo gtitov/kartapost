@@ -3,7 +3,12 @@
   {{ range first 4 (where .Site.RegularPages "Type" "blog") }}
     <div class="media">
       <a class="pull-left" href="{{ .Permalink }}">
-        <img class="media-object" src="{{ .Params.Image | relURL }}" alt="{{ .Title }}">
+        {{if .Params.image }}
+        {{ $image := .Params.image }}
+        {{ $src := resources.Get $image }}
+        {{ $small := $src.Resize "360x q60 Box" }}
+        <img class="media-object" src="{{ $small.RelPermalink }}" alt="{{ .Title }}">
+        {{ end }}
       </a>
       <div class="media-body">
         <h4 class="media-heading"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
