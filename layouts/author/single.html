@@ -9,12 +9,12 @@
 				<div class="text-center">
 					<figure>
 						{{ if .Params.Photo }}
-						<img style="border-radius: 50%;" class="img-fluid avatar-caption" src="{{.Params.Photo}}">
+						<img style="border-radius: 50%;" class="img-fluid" src="{{.Params.Photo}}">
 						{{ else }}
-						<img style="border-radius: 50%;" class="img-fluid avatar-caption"
+						<img style="border-radius: 50%;" class="img-fluid"
 							src="https://i.ibb.co/nDJbSmM/f-Jdt9-XOj7-Us.jpg">
 						{{ end }}
-						<figcaption>{{ .Params.Title }}</figcaption>
+						<h4>{{ .Params.Title }}</h4>
 					</figure>
 					<hr>
 					{{ .Content }}
@@ -48,7 +48,12 @@
 				<div class="post">
 					<div class="post-thumb">
 						<a href="{{ .Permalink }}">
-							<img class="img-responsive" src="{{ .Params.Image | relURL }}" alt="{{ .Title }}">
+							{{if .Params.image }}
+							{{ $image := .Params.image }}
+							{{ $src := resources.Get $image }}
+							{{ $medium := $src.Resize "800x q85 Box" }}
+							<img class="img-responsive" src="{{ $medium.RelPermalink }}" alt="{{ .Title }}">
+							{{ end }}
 						</a>
 					</div>
 					<h3 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
