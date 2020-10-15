@@ -1,12 +1,22 @@
+{{ if .Params.Bg_image }}
 <section class="page-title bg-2" style="background-image: url('{{.Params.Bg_image | absURL}}');">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="block">
           <h1>{{ .Title }}</h1>
-          <p>{{ .Params.Description }}</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+{{else if .Params.image }}
+{{ $image := .Params.image }}
+{{ $src := resources.Get $image }}
+{{ $medium := $src.Resize "1000x q85 Box" }}
+<section class="page-title bg-3" style="background-image: url('{{ $medium.RelPermalink }}');">
+</section>
+{{ else }}
+<section class="page-title bg-2" style="background-image: url('{{ `img/backgrounds/post-bg.jpg` | absURL}}');">
+</section>
+{{ end }}

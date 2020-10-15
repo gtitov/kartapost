@@ -9,3 +9,13 @@
 	background-size: cover;
 	background-attachment: fixed;
 }
+
+.bg-3 {
+	background-size: cover;
+	background-attachment: fixed;
+	-webkit-filter: sepia(90%);
+	-moz-filter: sepia(90%);
+	-o-filter: sepia(90%);
+	-ms-filter: sepia(90%);
+	filter: sepia(90%)
+}
