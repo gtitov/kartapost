@@ -28,13 +28,15 @@
   }
 
   .post-title {
-    margin-top: 0;
+    font-size: 3rem;
     font-family: $secondary-font;
-    font-weight: 700;
+    font-weight: 800;
+    color: $dark-text-color;
     // margin: 25px 0 0;
 
     a {
       color: $dark-text-color;
+      
       &:hover {
         // color: $primary-text-color;
       }
