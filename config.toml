@@ -1,5 +1,4 @@
 ################################# Default configuration ###################
-baseURL = "https://cartopost.ga"
 defaultContentLanguage = "ru"
 title = "KAPTÁ.post"
 # post pagination
