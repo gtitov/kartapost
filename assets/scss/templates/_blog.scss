@@ -44,29 +44,21 @@
   }
 
   .post-meta {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 10px;
 
     ul {
       li {
         display: inline-block;
-        color: $light-text-color;
+        color: $primary-text-color;
         margin-right: 20px;
         font-size: 12px;
-        letter-spacing: .5px;
+        // letter-spacing: .5px;
 
         a {
-          color: $light-text-color;
-
-          &:hover {
-            color: $primary-text-color;
-          }
+          color: $primary-text-color;
         }
       }
-    }
-
-    .post-author {
-      color: $black;
     }
   }
 

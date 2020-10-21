@@ -4,8 +4,8 @@
 .post.post-single {
   border: none;
 
-  .post-thumb {
-    margin-top: 30px;
+  .post-author {
+    font-size: 1.5rem;
   }
 
   .post-title {
@@ -30,7 +30,7 @@
 }
 
 .post-social-share {
-  margin-bottom: 50px;
+  margin: 10px 0 10px 0;
 }
 
 .post-comments {
