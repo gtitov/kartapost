@@ -23,8 +23,7 @@
           <h3 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
           <div class="post-meta">
             <ul>
-              <li><i class="ion-calendar"></i> {{ .PublishDate.Format $.Site.Params.date_format }}</li>
-              <li><i class="ion-android-person"></i>
+							<li>
 								{{ i18n "posted_by" }}
 								{{ $author_id := .Params.Author }}
 								<a class="text-primary" href="{{ `author/` | relLangURL }}{{ $author_id | urlize }}">
@@ -33,6 +32,7 @@
 									{{ end }}
 								</a>
 							</li>
+              <li><i class="ion-calendar"></i> {{ .PublishDate.Format $.Site.Params.date_format }}</li>
 							<li><i class="ion-android-folder"></i> 
                 {{ range $index, $elements:= .Params.Categories }}
 								{{ if ne $index 0 }}, {{ end }}<a href="{{ `categories/` | relLangURL }}{{ . | lower }}">{{ . | humanize }}</a>
