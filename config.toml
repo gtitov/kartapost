@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseurl = "kartapost.netlify.app"
+baseURL = "https://kartapost.netlify.app/"
 defaultContentLanguage = "ru"
 title = "KAPTÁ.post"
 # post pagination
