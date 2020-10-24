@@ -61,12 +61,6 @@ collections:
         pattern: ['https:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}', 'Ниже подсказка']
         hint: 'Вставьте URL изображения. Размер 200х200px. Обязательно https://. Воспользуйтесь сервисом https://www.techpowerup.org/upload'
         required: false
-      - label: 'Обои'
-        name: 'bg_image'
-        widget: 'string'
-        pattern: ['https:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}', 'Ниже подсказка']
-        hint: 'Вставьте URL изображения. Обязательно https://. Воспользуйтесь сервисом https://www.techpowerup.org/upload'
-        required: false
       - label: 'Об авторе'
         name: 'body'
         widget: 'text'
