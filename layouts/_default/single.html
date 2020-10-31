@@ -8,35 +8,35 @@
 			<div class="col-md-8">
 				<div class="post post-single">
 					<h2 class="post-title">{{ .Title }}</h2>
+					<div class="post-author">
+						{{ i18n "posted_by" }}
+						{{ $author_id := .Params.Author }}
+						<a class="text-primary" href="{{ `author/` | relLangURL }}{{ $author_id | urlize }}">
+							{{ range $author_page := (where .Site.RegularPages "Type" "author") }}
+							{{ if eq $author_page.Params.Id $author_id }}{{ $author_page.Params.Title }}{{ end }}
+							{{ end }}
+						</a>
+					</div>
+
 					<div class="post-meta">
 						<ul>
-							<li>
-								{{ i18n "posted_by" }}
-								{{ $author_id := .Params.Author }}
-								<a class="text-primary post-author" href="{{ `author/` | relLangURL }}{{ $author_id | urlize }}">
-									{{ range $author_page := (where .Site.RegularPages "Type" "author") }}
-									{{ if eq $author_page.Params.Id $author_id }}{{ $author_page.Params.Title }}{{ end }}
-									{{ end }}
-								</a>
-							</li>
 							<li><i class="ion-calendar"></i> {{ .PublishDate.Format $.Site.Params.date_format }}</li>
 							<li><i class="ion-android-folder"></i>
 								{{ range $index, $elements:= .Params.Categories }}
-								{{ if ne $index 0 }}, {{ end }}<a
-									href="{{ `categories/` | relLangURL }}{{ . | lower }}">{{ . | humanize }}</a>
+								{{ if ne $index 0 }}, {{ end }}<a href="{{ `categories/` | relLangURL }}{{ . | lower }}">{{ . | humanize }}</a>
 								{{ end }}
 							</li>
 							<li><i class="ion-pricetags"></i>
 								{{ range $index, $elements:= .Params.Tags }}
-								{{ if ne $index 0 }}, {{ end }}<a
-									href="{{ `tags/` | relLangURL }}{{ . | lower }}">{{ . | humanize | lower }}</a>
+								{{ if ne $index 0 }}, {{ end }}<a href="{{ `tags/` | relLangURL }}{{ . | lower }}">{{ . | humanize | lower }}</a>
 								{{ end }}
 							</li>
 						</ul>
 					</div>
 					<!-- Share buttons -->
 					<script src="https://yastatic.net/share2/share.js" async></script>
-					<div class="ya-share2 post-social-share" data-curtain data-shape="round" data-color-scheme="whiteblack" data-services="vkontakte,facebook,telegram,twitter"></div>
+					<div class="ya-share2 post-social-share" data-curtain data-shape="round" data-color-scheme="whiteblack"
+					 data-services="vkontakte,facebook,telegram,twitter"></div>
 					<div class="post-thumb">
 						{{if .Params.image }}
 						{{ $image := .Params.image }}

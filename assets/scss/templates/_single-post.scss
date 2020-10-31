@@ -6,6 +6,12 @@
 
   .post-author {
     font-size: 1.8rem;
+    a {
+      color: $primary-text-color;
+      &:hover {
+        color: $light-text-color;
+      }
+    }
   }
 
   .post-title {
@@ -142,27 +148,6 @@
   }
 }
 
-.social-profile {
-  ul {
-    li {
-      margin: 0 10px 0 0;
-      display: inline-block;
-
-      a {
-        color: #4e595f;
-        display: block;
-        font-size: 16px;
-
-        i {
-          &:hover {
-            color: $primary-color;
-          }
-        }
-      }
-    }
-  }
-}
-
 .comments-section {
   margin-top: 35px;
 }
@@ -170,10 +155,6 @@
 
 .author-about {
   margin-top: 40px;
-}
-
-.post-author {
-  margin-right: 20px;
 }
 
 .post-author>img {
