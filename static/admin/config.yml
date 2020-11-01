@@ -11,9 +11,7 @@ collections:
     create: true
     slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
     editor:
-      preview: false
-    media_folder: 'assets'
-    # public_folder: ''
+      preview: true
     fields:
       - label: 'Название'
         name: 'title'
@@ -31,10 +29,9 @@ collections:
       - label: 'Обложка'
         name: 'image'
         widget: 'image'
+        media_folder: 'assets/covers'
         allow_multiple: false
         hint: 'Сожмите в MozJPEG, используя https://squoosh.app/'
-        media_folder: '/{{media_folder}}/covers'
-        # public_folder: '{{public_folder}}/posts/images/widget/image'
       - label: 'Категория'
         name: 'categories'
         widget: 'list'
