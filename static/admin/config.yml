@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-media_folder: assets/covers
-public_folder: /covers
+media_folder: static/blog
+public_folder: /images
 collections:
   - name: 'blog'
     label: 'Публикации'
@@ -30,6 +30,10 @@ collections:
         widget: 'image'
         allow_multiple: false
         hint: 'Сожмите в MozJPEG, используя https://squoosh.app/'
+        media_library:
+          config:
+            media_folder: 'assets/covers'
+            public_folder: '/covers'
       - label: 'Категория'
         name: 'categories'
         widget: 'list'
