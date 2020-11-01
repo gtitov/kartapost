@@ -31,7 +31,7 @@ collections:
         widget: 'image'
         allow_multiple: false
         hint: 'Сожмите в MozJPEG, используя https://squoosh.app/'
-        media_folder: 'assets/covers'
+        media_folder: '/assets/covers'
         public_folder: '/covers'
       - label: 'Категория'
         name: 'categories'
